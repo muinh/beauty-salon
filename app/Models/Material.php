@@ -9,5 +9,10 @@ class Material extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'image_id', 'material_category_id'];
+    protected $fillable = ['name', 'image', 'material_category_id'];
+
+    public function materialCategoryId()
+    {
+        return $this->hasOne(MaterialCategory::class, 'id');
+    }
 }

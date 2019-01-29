@@ -17,14 +17,16 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('code');
-            $table->string('main_image_id');
-            $table->string('features');
-            $table->string('category_id');
+            $table->string('main_image');
+            $table->text('features');
+            $table->integer('category_id');
             $table->integer('line_id');
             $table->integer('designer_id');
             $table->integer('brand_id');
-            $table->integer('dimensions_inch');
-            $table->integer('dimensions_cm');
+            $table->string('images')->default('[]');
+            $table->string('materials');
+            $table->string('dimensions_inch');
+            $table->string('dimensions_cm');
             $table->timestamps();
         });
     }

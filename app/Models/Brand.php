@@ -9,5 +9,5 @@ class Brand extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'url', 'logo_id', 'color'];
+    protected $fillable = ['title', 'url', 'bwImage', 'image', 'color'];
 }

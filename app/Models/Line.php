@@ -9,10 +9,5 @@ class Line extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'description', 'image_id'];
-
-    public function products()
-    {
-
-    }
+    protected $fillable = ['name', 'slug', 'description', 'image'];
 }

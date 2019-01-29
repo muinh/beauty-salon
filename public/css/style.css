@@ -114,8 +114,6 @@ blocks.css
 .breadcrumbs-v1 {
   padding: 100px 0;
   position: relative;
-  background: url(https://www.gammabross.com/assets/img/breadcrumbs/img1.jpg) center no-repeat;
-  background-size: cover; /*Scales the background image to be as large as possible*/
 }
 
 .breadcrumbs-v1:after {
@@ -165,7 +163,6 @@ blocks.css
 .breadcrumbs-v2 {
   text-align: center;
   position: relative;
-  background: url(https://www.gammabross.com/assets/img/bg/11.jpg) no-repeat center;
 }
 
 .breadcrumbs-v2-in {
@@ -202,24 +199,6 @@ blocks.css
 
 .breadcrumbs-v3.breadcrumbs-lg {
   padding: 200px 0;
-}
-
-.breadcrumbs-v3.img-v1 {
-  background: url(https://www.gammabross.com/assets/img/breadcrumbs/img1.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.breadcrumbs-v3.img-v2 {
-  background: url(https://www.gammabross.com/assets/img/breadcrumbs/img2.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.breadcrumbs-v3.img-v3 {
-  background: url(https://www.gammabross.com/assets/img/breadcrumbs/img3.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
 .breadcrumbs-v3:after {
@@ -1467,7 +1446,6 @@ blocks.css
 .call-action-v2 {
   padding: 50px 0;
   text-align: center;
-  background: url(https://www.gammabross.com/assets/img/patterns/16.png);
 }
 
 .call-action-v2 h2 {
@@ -1877,7 +1855,6 @@ blocks.css
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: url(https://www.gammabross.com/assets/img/team/faces.jpg) 50% 0 repeat fixed;
 }
 
 .parallax-quote:after {
@@ -1897,7 +1874,6 @@ blocks.css
   height: 100%; 
   content: " ";
   position: absolute;
-  background: url(https://www.gammabross.com/assets/img/patterns/gridtile.png) repeat;
 }
 
 /*Parallax Quote Inner*/
@@ -1983,10 +1959,6 @@ blocks.css
 
 /*Parallax Team
 ------------------------------------*/
-.parallax-team {
-  background: url(https://www.gammabross.com/assets/img/team/faces.jpg) 50% 0 repeat fixed;  
-}
-
 .parallax-team,
 .parallax-team .title-box-v2 {
   position: relative;
@@ -2003,11 +1975,6 @@ blocks.css
   background: rgba(255, 255, 255, 0.77);
 }
 
-/*Parallax Team*/
-.parallax-team {
-  background: url(../../images/bg/bg4.jpg) 50% 0 repeat fixed;
-}
-
 .parallax-team,
 .parallax-team .title-box-v2 {
   position: relative;
@@ -2019,15 +1986,8 @@ blocks.css
 
 /*Parallax Counter
 ------------------------------------*/
-.parallax-bg {
-  background: url(https://www.gammabross.com/assets/img/patterns/5.png) repeat fixed;
-}
-
-/*Parallax Counter
-------------------------------------*/
 .parallax-counter {
   padding: 30px 0;
-  background: url(https://www.gammabross.com/assets/img/patterns/5.png) repeat fixed;
 }
 
 .parallax-counter .counters {
@@ -2049,7 +2009,6 @@ blocks.css
 ------------------------------------*/
 .parallax-counter-v1 {
   padding: 60px 0;
-  background: url(https://www.gammabross.com/assets/img/patterns/5.png) repeat fixed;
 }
 
 .parallax-counter-v1 .counters {
@@ -2074,7 +2033,6 @@ blocks.css
 .parallax-counter-v2 {
   position: relative;
   padding: 80px 0 60px;
-  background: url(https://www.gammabross.com/assets/img/patterns/16.png) repeat fixed;
 }
 
 .parallax-counter-v2:after {
@@ -2135,7 +2093,6 @@ blocks.css
     overflow: hidden;
     text-align: center;
     position: relative;
-    background: url(https://www.gammabross.com/assets/img/bg/25.jpg) 50% 0 fixed;
 }
 
 .parallax-counter-v3:after {
@@ -2218,7 +2175,6 @@ blocks.css
   overflow: hidden;
   text-align: center;
   position: relative;
-  background: url(https://www.gammabross.com/assets/img/bg/19.jpg) 50% 0 fixed;
 }
 
 .parallax-counter-v4:after {
@@ -2258,7 +2214,6 @@ blocks.css
 ------------------------------------*/
 .flat-bg-block-v1 {
   padding: 40px 0;
-  background: url(https://www.gammabross.com/assets/img/patterns/16.png) repeat;
 }
 
 .flat-bg-block-v1 .checked-list.first-child {
@@ -2678,7 +2633,6 @@ blocks.css
 .quote-v1 {
   padding: 60px 0;
   text-align: center;
-  background: url(https://www.gammabross.com/assets/img/patterns/5.png) repeat;
 }
 
 .quote-v1 p {
@@ -2835,24 +2789,6 @@ blocks.css
   position: relative;
 }
 
-.interactive-slider-v1.img-v1 {
-  background: url(https://www.gammabross.com/assets/img/bg/18.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.interactive-slider-v1.img-v2 {
-  background: url(https://www.gammabross.com/assets/img/bg/19.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.interactive-slider-v1.img-v3 {
-  background: url(https://www.gammabross.com/assets/img/bg/18.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
 .interactive-slider-v1:after {
   top: 0;
   left: 0;
@@ -2895,21 +2831,6 @@ blocks.css
   padding: 200px 0;
   position: relative;
   text-align: center;
-  background: url(https://www.gammabross.com/assets/img/bg/18.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.interactive-slider-v2.img-v1 {
-  background: url(https://www.gammabross.com/assets/img/bg/25.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.interactive-slider-v2.img-v2 {
-  background: url(https://www.gammabross.com/assets/img/bg/14.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
 .interactive-slider-v2:after {
@@ -4459,7 +4380,6 @@ plugins.css
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: #333 url(https://www.gammabross.com/assets/img/bg/19.jpg) 50% 0 fixed;
   background-size: cover;
   background-position: center center;    
 }
@@ -4481,7 +4401,6 @@ plugins.css
   height: 100%; 
   content: " ";
   position: absolute;
-  background: url(https://www.gammabross.com/assets/img/patterns/gridtile.png) repeat;
 }
 
 .parallax-twitter-in {
@@ -4530,7 +4449,6 @@ plugins.css
 .clients-section {
   padding: 60px 0;
   position: relative;
-  background: #333 url(https://www.gammabross.com/assets/img/bg/7.jpg) 50% fixed;
   background-size: cover;
   background-position: center center;    
 }
@@ -4552,7 +4470,6 @@ plugins.css
   height: 100%; 
   content: " ";
   position: absolute;
-  background: url(https://www.gammabross.com/assets/img/patterns/gridtile.png) repeat;
 }
 
 .clients-section .title-v1 p,
@@ -6462,36 +6379,6 @@ span.badge-dark,
 .social-icons-color li a:hover {
   opacity: 1;
 }
-
-.social_amazon {background: url(https://www.gammabross.com/assets/img/icons/social/amazon.png) no-repeat;}
-.social_behance {background: url(https://www.gammabross.com/assets/img/icons/social/behance.png) no-repeat;}
-.social_blogger {background: url(https://www.gammabross.com/assets/img/icons/social/blogger.png) no-repeat;}
-.social_deviantart {background: url(https://www.gammabross.com/assets/img/icons/social/deviantart.png) no-repeat;}
-.social_dribbble {background: url(https://www.gammabross.com/assets/img/icons/social/dribbble.png) no-repeat;}
-.social_dropbox {background: url(https://www.gammabross.com/assets/img/icons/social/dropbox.png) no-repeat;}
-.social_evernote {background: url(https://www.gammabross.com/assets/img/icons/social/evernote.png) no-repeat;}
-.social_facebook {background: url(https://www.gammabross.com/assets/img/icons/social/facebook.png) no-repeat;}
-.social_forrst {background: url(https://www.gammabross.com/assets/img/icons/social/forrst.png) no-repeat;}
-.social_github {background: url(https://www.gammabross.com/assets/img/icons/social/github.png) no-repeat;}
-.social_googleplus {background: url(https://www.gammabross.com/assets/img/icons/social/googleplus.png) no-repeat;}
-.social_jolicloud {background: url(https://www.gammabross.com/assets/img/icons/social/jolicloud.png) no-repeat;}
-.social_last-fm {background: url(https://www.gammabross.com/assets/img/icons/social/last-fm.png) no-repeat;}
-.social_linkedin {background: url(https://www.gammabross.com/assets/img/icons/social/linkedin.png) no-repeat;}
-.social_picasa {background: url(https://www.gammabross.com/assets/img/icons/social/picasa.png) no-repeat;}
-.social_pintrest {background: url(https://www.gammabross.com/assets/img/icons/social/pintrest.png) no-repeat;}
-.social_rss {background: url(https://www.gammabross.com/assets/img/icons/social/rss.png) no-repeat;}
-.social_skype {background: url(https://www.gammabross.com/assets/img/icons/social/skype.png) no-repeat;}
-.social_spotify {background: url(https://www.gammabross.com/assets/img/icons/social/spotify.png) no-repeat;}
-.social_stumbleupon {background: url(https://www.gammabross.com/assets/img/icons/social/stumbleupon.png) no-repeat;}
-.social_tumblr {background: url(https://www.gammabross.com/assets/img/icons/social/tumblr.png) no-repeat;}
-.social_twitter {background: url(https://www.gammabross.com/assets/img/icons/social/twitter.png) no-repeat;}
-.social_vimeo {background: url(https://www.gammabross.com/assets/img/icons/social/vimeo.png) no-repeat;}
-.social_wordpress {background: url(https://www.gammabross.com/assets/img/icons/social/wordpress.png) no-repeat;}
-.social_xing {background: url(https://www.gammabross.com/assets/img/icons/social/xing.png) no-repeat;}
-.social_yahoo {background: url(https://www.gammabross.com/assets/img/icons/social/yahoo.png) no-repeat;}
-.social_youtube {background: url(https://www.gammabross.com/assets/img/icons/social/youtube.png) no-repeat;}
-.social_vk {background: url(https://www.gammabross.com/assets/img/icons/social/vk.png) no-repeat;}
-.social_instagram {background: url(https://www.gammabross.com/assets/img/icons/social/instagram.png) no-repeat;}
 
 /*Font Awesome Icon Styles*/
 i.icon-custom {
@@ -8573,7 +8460,6 @@ a:hover {
   box-shadow: 0 0 5px #ccc;
   margin-left: auto !important;
   margin-right: auto !important;
-  background: url(https://www.gammabross.com/assets/img/patterns/15.png) repeat;
 }
 
 /*Main Styles
@@ -8582,7 +8468,6 @@ a:hover {
 .purchase {
 	padding: 25px 0 30px;
 	border-bottom: solid 1px #eee;
-	background: url(https://www.gammabross.com/assets/img/patterns/breadcrumbs.png) repeat;
 }
 .purchase p {
 	margin-bottom: 0;
@@ -9094,7 +8979,6 @@ a.thumbnail {
 	padding: 40px 0; 	
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
-	background: url(https://www.gammabross.com/assets/img/breadcrumbs.png) repeat;
 }
 
 /*Gallery Page
@@ -9301,7 +9185,6 @@ ul.blog-tags a:hover i {
 
 .slider-promo-info-bg {
 	padding: 25px 20px 20px;
-	background: url(https://www.gammabross.com/assets/img/bg-black.png) repeat;
 }
 
 .slider-promo-info span.big-size { 
@@ -10065,7 +9948,6 @@ img.img-mouse {
 .service-info {
 	position: relative;
 	padding: 40px 0 50px;
-	background: url(https://www.gammabross.com/assets/img/patterns/17.png) repeat;
 }
 
 .service-info .info-description {
@@ -10116,7 +9998,6 @@ img.img-mouse {
 ------------------------------------*/
 .testimonials-bs {
   padding: 50px 0;
-  background: url(https://www.gammabross.com/assets/img/bg/16.jpg) 50% 0 repeat fixed;  
 }
 
 .testimonials-bs .headline-center-v2 span.author {
@@ -11815,11 +11696,6 @@ footer-v1.css
 	line-height: 23px;
 }
 
-/*Dotted Map*/
-.footer-v1 .footer .map-img {
-	background: url(https://www.gammabross.com/assets/img/map-img.png) 5px 60px no-repeat;
-}
-
 /*Blog Posts (with images)*/
 .footer-v1 .footer .posts .dl-horizontal a {
  color: #dadada;
@@ -12061,7 +11937,7 @@ font-size: 13px;/* text-align: inherit; */}
 }
 
 .planner-map{
-    background-image: url('../../images/salon_planner.jpg');
+    background-image: url('../../img/salon_planner.jpg');
     height: 200px;
     background-color: #f5f5f5;
     background-size: cover;
@@ -12106,7 +11982,7 @@ width: 100%;padding: 15px 0;}
 
 
 .prehome .footer-v1{
-position: fixed;z-index: 9999;
+z-index: 9999;
 bottom: 0;
 width: 100%;}
 
@@ -12224,10 +12100,10 @@ span.prod-color.gammastore{ background-color:#d10a10}
 
 /* Stefo 29 06 2017 */
 
- .icon-lang-prehome {
-	 width: 60px;
-	 margin: 5px;
- }
+.icon-lang-prehome {
+ width: 60px;
+ margin: 5px;
+}
 
 /* Stefo 09 01 2018 */
 
@@ -12301,3 +12177,264 @@ a.video span {
     background-size: 60px;
   }
 }
+
+div.mapholder{ border:1px solid #fff; position:relative; height:330px; width:670px;}
+
+
+
+div.mondomapholder{ position:absolute; left:0px; top:0; height:330px; width:670px;}
+
+
+div.mondomap{ position:relative; width:670px; height:330px;   }
+
+div.mondomap a{ position:absolute;
+    -webkit-transition:all .1s ease-in; -moz-transition:all .1s ease-in; -o-transition:all .1s ease-in; transition:all .1s ease-in;
+    display:block; }
+
+div.mondomap a.africa{ left:234px; top:110px; width:156px; height:150px; z-index:2;
+    background-image:url(/img/maps/world-africa.png); background-repeat:no-repeat;}
+div.mondomap a.africa:hover{background-image:url(/img/maps/world-africa-hover.png)}
+
+div.mondomap a.sudamerica{ left:126px; top:162px; width:90px; height:140px; z-index:1;
+    background-image:url(/img/maps/world-sudamerica.png); background-repeat:no-repeat;}
+div.mondomap a.sudamerica:hover{background-image:url(/img/maps/world-sudamerica-hover.png)}
+
+div.mondomap a.nordamerica{ left:30px; top:26px; width:185px; height:146px; z-index:1;
+    background-image:url(/img/maps/world-nordamerica.png); background-repeat:no-repeat;}
+div.mondomap a.nordamerica:hover{background-image:url(/img/maps/world-nordamerica-hover.png)}
+
+div.mondomap a.europa{ left:200px; top:26px; width:183px; height:90px; z-index:3;
+    background-image:url(/img/maps/world-europa.png); background-repeat:no-repeat;}
+div.mondomap a.europa:hover{background-image:url(/img/maps/world-europa-hover.png)}
+
+div.mondomap a.oceania{ left:490px; top:171px; width:148px; height:113px; z-index:1;
+    background-image:url(/img/maps/world-oceania.png); background-repeat:no-repeat;}
+div.mondomap a.oceania:hover{background-image:url(/img/maps/world-oceania-hover.png)}
+
+div.mondomap a.asia{ left:328px; top:29px; width:230px; height:177px; z-index:1;
+    background-image:url(/img/maps/world-asia.png); background-repeat:no-repeat;}
+div.mondomap a.asia:hover{background-image:url(/img/maps/world-asia-hover.png)}
+
+div.distributoriholder{ margin-top:15px;}
+div.distributoriholder h3{ padding:0; margin:0; font-size:15px; font-weight:bold; color:#aaa; margin-bottom:10px;}
+
+div.distributorebox{ line-height:16px; padding-bottom:15px}
+div.distributorebox h4{ font-size:14px; font-weight:bold; margin-bottom:6px; }
+div.distributorebox span{  width:20px; color:#aaa; float:left }
+div.distributorebox a{ color:#000; text-decoration:none}
+div.distributorebox a:hover{color:#000; text-decoration:underline }
+
+div.mapholder{ border:1px solid #fff; position:relative; height:450px; width:670px;}
+div.mapholder a.mondo{
+    left:20px; top:20px; width:163px; height:74px; z-index:3;
+    background-image:url(/img/maps/mondo.png); background-repeat:no-repeat;
+    position:absolute;
+    -webkit-transition:all .1s ease-in; -moz-transition:all .1s ease-in; -o-transition:all .1s ease-in; transition:all .1s ease-in;
+    display:block;}
+div.mapholder a.mondo:hover{background-image:url(/img/maps/mondo-hover.png)}
+
+
+div.europemapholder{ position:absolute; right:0px; top:0}
+
+
+div.europemap{ position:relative; width:408px; height:450px; }
+
+div.europemap a{ position:absolute;
+    -webkit-transition:all .1s ease-in; -moz-transition:all .1s ease-in; -o-transition:all .1s ease-in; transition:all .1s ease-in;
+    display:block; }
+
+div.europemap a.albania{ left:303px; top:360px; width:16px; height:34px; z-index:1;
+    background-image:url(/img/maps/albania.png); background-repeat:no-repeat;}
+div.europemap a.albania:hover{background-image:url(/img/maps/albania-hover.png)}
+
+div.europemap a.uk{ left:96px; top:136px; width:72px; height:138px; z-index:1;
+    background-image:url(/img/maps/uk.png); background-repeat:no-repeat;}
+div.europemap a.uk:hover{background-image:url(/img/maps/uk-hover.png);}
+
+div.europemap a.andorra{ left:145px; top:355px; width:5px; height:5px; z-index:5;
+    background-image:url(/img/maps/andorra.png); background-repeat:no-repeat;
+}
+div.europemap a.andorra:hover{background-image:url(/img/maps/andorra-hover.png);}
+
+div.europemap a.spagna{ left:23px; top:325px; width:146px; height:113px; z-index:1;
+    background-image:url(/img/maps/spagna.png); background-repeat:no-repeat;}
+div.europemap a.spagna:hover{background-image:url(/img/maps/spagna-hover.png);}
+
+div.europemap a.portugal{ left:20px; top:343px; width:59px; height:83px; z-index:2;
+    background-image:url(/img/maps/portugal.png); background-repeat:no-repeat;}
+div.europemap a.portugal:hover{background-image:url(/img/maps/portugal-hover.png);}
+
+div.europemap a.francia{ left:104px; top:255px; width:115px; height:124px; z-index:1;
+    background-image:url(/img/maps/francia.png); background-repeat:no-repeat;}
+div.europemap a.francia:hover{background-image:url(/img/maps/francia-hover.png);}
+
+div.europemap a.montenegro{ left:293px; top:349px; width:21px; height:22px; z-index:4;
+    background-image:url(/img/maps/montenegro.png); background-repeat:no-repeat;}
+div.europemap a.montenegro:hover{background-image:url(/img/maps/montenegro-hover.png);}
+
+div.europemap a.lichtenstein{ left:217px; top:307px; width:4px; height:4px; z-index:5;
+    background-image:url(/img/maps/lichtenstein.png); background-repeat:no-repeat;
+}
+div.europemap a.lichtenstein:hover{background-image:url(/img/maps/lichtenstein-hover.png);}
+
+div.europemap a.bosnia{ left:270px; top:332px; width:36px; height:31px; z-index:3;
+    background-image:url(/img/maps/bosnia.png); background-repeat:no-repeat;}
+div.europemap a.bosnia:hover{background-image:url(/img/maps/bosnia-hover.png);}
+
+div.europemap a.belarus{ left:321px; top:189px; width:68px; height:63px; z-index:2;
+    background-image:url(/img/maps/belarus.png); background-repeat:no-repeat;}
+div.europemap a.belarus:hover{background-image:url(/img/maps/belarus-hover.png);}
+
+div.europemap a.bulgaria{ left:328px; top:333px; width:56px; height:40px; z-index:2;
+    background-image:url(/img/maps/bulgaria.png); background-repeat:no-repeat;}
+div.europemap a.bulgaria:hover{background-image:url(/img/maps/bulgaria-hover.png);}
+
+div.europemap a.luxemburg{ left:191px; top:270px; width:7px; height:10px; z-index:5;
+    background-image:url(/img/maps/luxemburg.png); background-repeat:no-repeat;
+}
+div.europemap a.luxemburg:hover{background-image:url(/img/maps/luxemburg-hover.png);}
+
+
+div.europemap a.belgio{ left:168px; top:252px; width:30px; height:27px; z-index:4;
+    background-image:url(/img/maps/belgio.png); background-repeat:no-repeat;
+}
+div.europemap a.belgio:hover{background-image:url(/img/maps/belgio-hover.png);}
+
+div.europemap a.croazia{ left:251px; top:315px; width:52px; height:50px; z-index:2;
+    background-image:url(/img/maps/croazia.png); background-repeat:no-repeat;}
+div.europemap a.croazia:hover{background-image:url(/img/maps/croazia-hover.png);}
+
+div.europemap a.czech{ left:239px; top:261px; width:55px; height:32px; z-index:2;
+    background-image:url(/img/maps/czech.png); background-repeat:no-repeat;}
+div.europemap a.czech:hover{background-image:url(/img/maps/czech-hover.png);}
+
+div.europemap a.danimarca{ left:213px; top:181px; width:50px; height:40px; z-index:1;
+    background-image:url(/img/maps/danimarca.png); background-repeat:no-repeat;}
+div.europemap a.danimarca:hover{background-image:url(/img/maps/danimarca-hover.png);}
+
+div.europemap a.estonia{ left:302px; top:150px; width:40px; height:27px; z-index:1;
+    background-image:url(/img/maps/estonia.png); background-repeat:no-repeat;}
+div.europemap a.estonia:hover{background-image:url(/img/maps/estonia-hover.png);}
+
+div.europemap a.greece{ left:306px; top:363px; width:91px; height:87px; z-index:1;
+    background-image:url(/img/maps/greece.png); background-repeat:no-repeat;}
+div.europemap a.greece:hover{background-image:url(/img/maps/greece-hover.png);}
+
+div.europemap a.hungary{ left:273px; top:288px; width:54px; height:37px; z-index:1;
+    background-image:url(/img/maps/hungary.png); background-repeat:no-repeat;}
+div.europemap a.hungary:hover{background-image:url(/img/maps/hungary-hover.png);}
+
+div.europemap a.iceland{ left:67px; top:32px; width:53px; height:44px; z-index:1;
+    background-image:url(/img/maps/iceland.png); background-repeat:no-repeat;}
+div.europemap a.iceland:hover{background-image:url(/img/maps/iceland-hover.png);}
+
+/* finland, germany, monaco */
+
+div.europemap a.ireland{ left:76px; top:189px; width:44px; height:45px; z-index:2;
+    background-image:url(/img/maps/ireland.png); background-repeat:no-repeat; }
+div.europemap a.ireland:hover{background-image:url(/img/maps/ireland-hover.png);}
+
+div.europemap a.sanmarino{ left:241px; top:347px; width:3px; height:3px; z-index:5;
+    background-image:url(/img/maps/sanmarino.png); background-repeat:no-repeat;}
+div.europemap a.sanmarino:hover{background-image:url(/img/maps/sanmarino-hover.png);}
+
+div.europemap a.italy{ left:193px; top:308px; width:107px; height:142px; z-index:1;
+    background-image:url(/img/maps/italy.png); background-repeat:no-repeat;}
+div.europemap a.italy:hover{background-image:url(/img/maps/italy-hover.png);}
+
+div.europemap a.kosovo{ left:309px; top:351px; width:18px; height:19px; z-index:4;
+    background-image:url(/img/maps/kosovo.png); background-repeat:no-repeat;}
+div.europemap a.kosovo:hover{background-image:url(/img/maps/kosovo-hover.png);}
+
+div.europemap a.lettonia{ left:299px; top:170px; width:50px; height:29px; z-index:1;
+    background-image:url(/img/maps/lettonia.png); background-repeat:no-repeat;}
+div.europemap a.lettonia:hover{background-image:url(/img/maps/lettonia-hover.png);}
+
+div.europemap a.lituania{ left:300px; top:189px; width:43px; height:33px; z-index:1;
+    background-image:url(/img/maps/lituania.png); background-repeat:no-repeat;}
+div.europemap a.lituania:hover{background-image:url(/img/maps/lituania-hover.png);}
+
+div.europemap a.macedonia{ left:314px; top:360px; width:25px; height:23px; z-index:1;
+    background-image:url(/img/maps/macedonia.png); background-repeat:no-repeat;}
+div.europemap a.macedonia:hover{background-image:url(/img/maps/macedonia-hover.png);}
+
+div.europemap a.malta{ left:260px; top:441px; width:6px; height:6px; z-index:3;
+    background-image:url(/img/maps/malta.png); background-repeat:no-repeat;}
+div.europemap a.malta:hover{background-image:url(/img/maps/malta-hover.png);}
+
+div.europemap a.moldavia{ left:356px; top:282px; width:31px; height:35px; z-index:2;
+    background-image:url(/img/maps/moldavia.png); background-repeat:no-repeat;}
+div.europemap a.moldavia:hover{background-image:url(/img/maps/moldavia-hover.png);}
+
+div.europemap a.olanda{ left:175px; top:229px; width:32px; height:35px; z-index:2;
+    background-image:url(/img/maps/olanda.png); background-repeat:no-repeat;}
+div.europemap a.olanda:hover{background-image:url(/img/maps/olanda-hover.png);}
+
+div.europemap a.norway{ left:163px; top:6px; width:163px; height:171px; z-index:0;
+    background-image:url(/img/maps/norway.png); background-repeat:no-repeat;}
+div.europemap a.norway:hover{background-image:url(/img/maps/norway-hover.png);}
+
+div.europemap a.poland{ left:254px; top:214px; width:78px; height:69px; z-index:1;
+    background-image:url(/img/maps/poland.png); background-repeat:no-repeat;}
+div.europemap a.poland:hover{background-image:url(/img/maps/poland-hover.png);}
+
+div.europemap a.romania{ left:307px; top:285px; width:82px; height:60px; z-index:1;
+    background-image:url(/img/maps/romania.png); background-repeat:no-repeat;}
+div.europemap a.romania:hover{background-image:url(/img/maps/romania-hover.png);}
+
+div.europemap a.russia{ left:294px; top:12px; width:114px; height:225px; z-index:0;
+    background-image:url(/img/maps/russia.png); background-repeat:no-repeat;}
+div.europemap a.russia:hover{background-image:url(/img/maps/russia-hover.png);}
+
+div.europemap a.serbia{ left:296px; top:317px; width:40px; height:47px; z-index:2;
+    background-image:url(/img/maps/serbia.png); background-repeat:no-repeat;}
+div.europemap a.serbia:hover{background-image:url(/img/maps/serbia-hover.png);}
+
+div.europemap a.slovakia{ left:277px; top:276px; width:47px; height:26px; z-index:2;
+    background-image:url(/img/maps/slovakia.png); background-repeat:no-repeat;}
+div.europemap a.slovakia:hover{background-image:url(/img/maps/slovakia-hover.png);}
+
+div.europemap a.slovenia{ left:249px; top:311px; width:29px; height:20px; z-index:3;
+    background-image:url(/img/maps/slovenia.png); background-repeat:no-repeat;}
+div.europemap a.slovenia:hover{background-image:url(/img/maps/slovenia-hover.png);}
+
+div.europemap a.sweden{ left:235px; top:44px; width:68px; height:168px; z-index:2;
+    background-image:url(/img/maps/sweden.png); background-repeat:no-repeat;}
+div.europemap a.sweden:hover{background-image:url(/img/maps/sweden-hover.png);}
+
+div.europemap a.svizzera{ left:188px; top:300px; width:39px; height:25px; z-index:2;
+    background-image:url(/img/maps/svizzera.png); background-repeat:no-repeat;}
+div.europemap a.svizzera:hover{background-image:url(/img/maps/svizzera-hover.png);}
+
+div.europemap a.austria{ left:218px; top:286px; width:64px; height:32px; z-index:1;
+    background-image:url(/img/maps/austria.png); background-repeat:no-repeat;}
+div.europemap a.austria:hover{background-image:url(/img/maps/austria-hover.png);}
+
+div.europemap a.turchia{ left:363px; top:357px; width:45px; height:67px; z-index:1;
+    background-image:url(/img/maps/turchia.png); background-repeat:no-repeat;}
+div.europemap a.turchia:hover{background-image:url(/img/maps/turchia-hover.png);}
+
+div.europemap a.ucraina{ left:319px; top:223px; width:45px; height:67px; z-index:1;
+    background-image:url(/img/maps/ucraina.png); background-repeat:no-repeat;}
+div.europemap a.ucraina:hover{background-image:url(/img/maps/ucraina-hover.png);}
+
+div.europemap a.monaco{ left:197px; top:348px; width:4px; height:3px; z-index:4;
+    background-image:url(/img/maps/monaco.png); background-repeat:no-repeat;}
+div.europemap a.monaco:hover{background-image:url(/img/maps/monaco-hover.png);}
+
+div.europemap a.finland{ left:281px; top:27px; width:69px; height:128px; z-index:1;
+    background-image:url(/img/maps/finland.png); background-repeat:no-repeat;}
+div.europemap a.finland:hover{background-image:url(/img/maps/finland-hover.png);}
+
+div.europemap a.germany{ left:193px; top:213px; width:70px; height:96px; z-index:1;
+    background-image:url(/img/maps/germany.png); background-repeat:no-repeat;}
+div.europemap a.germany:hover{background-image:url(/img/maps/germany-hover.png);}
+
+div.distributoriholder{ margin-top:15px;}
+div.distributoriholder h3{ padding:0; margin:0; font-size:15px; font-weight:bold; color:#aaa; margin-bottom:10px;}
+
+div.distributorebox{ line-height:16px; padding-bottom:15px}
+div.distributorebox h4{ font-size:14px; font-weight:bold; margin-bottom:6px; }
+div.distributorebox span{  width:20px; color:#aaa; float:left }
+div.distributorebox a{ color:#000; text-decoration:none}
+div.distributorebox a:hover{color:#000; text-decoration:underline }

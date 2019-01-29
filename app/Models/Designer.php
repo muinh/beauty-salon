@@ -9,10 +9,5 @@ class Designer extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'description', 'photo_id', 'website'];
-
-    public function products()
-    {
-
-    }
+    protected $fillable = ['name', 'slug', 'description', 'image', 'website'];
 }

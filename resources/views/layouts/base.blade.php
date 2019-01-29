@@ -4,9 +4,9 @@
 <!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
-@include('layouts.head')
+@include('layouts.components.head')
 <body class="header-fixed prehome">
     @yield('content')
-    @include('layouts.javascripts')
+    @include('layouts.components.javascripts')
 </body>
 </html>

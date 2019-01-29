@@ -9,10 +9,5 @@ class Category extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title'];
-
-    public function products()
-    {
-
-    }
+    protected $fillable = ['title', 'slug', 'image'];
 }

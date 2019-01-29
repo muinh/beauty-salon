@@ -2,21 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\CategoryService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
-    private $categoryService;
-
-    public function __construct(CategoryService $categoryService)
+    /**
+     * @param Request $request
+     * @return Factory|View
+     */
+    public function index(Request $request)
     {
-        $this->categoryService = $categoryService;
-    }
+        $categories = array_get($this->getOptions($request), 'categories');
+        $lines = array_get($this->getOptions($request), 'lines');
 
-    public function index()
-    {
-        return view('category.index', [
-            'categories' => $this->categoryService->getAllCategories()
-        ]);
+        return view('category.index', array_merge([
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
+            'steps' => ['Products']
+        ], $this->getOptions($request)));
     }
 }

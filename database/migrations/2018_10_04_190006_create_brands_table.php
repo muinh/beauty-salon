@@ -17,7 +17,8 @@ class CreateBrandsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('url');
-            $table->integer('logo_id');
+            $table->string('bwImage');
+            $table->string('image');
             $table->string('color');
             $table->timestamps();
         });
