@@ -29,7 +29,6 @@ class Locale
             session(['locale' => $segment]);
             app()->setLocale($segment);
         }
-//        dd($request->path());
 
         return $next($request);
     }
