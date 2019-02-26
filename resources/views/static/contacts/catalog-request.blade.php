@@ -8,7 +8,7 @@
                 <h1 class="pull-left">{{ array_pop($steps) }}</h1>
                 <div class="clear-both margin-bottom-30"></div>
                 <div class="item active">
-                    <img src="{{ asset('storage/' . $sliderRand->image) }}" style="width:100%">
+                    <img src="{{ asset($assetsSrc . $sliderRand->image) }}" style="width:100%">
                     <div class="carousel-caption"><p></p></div>
                 </div>
                 <p> <strong>{{ env('APP_NAME') }}</strong> catalog.</p>

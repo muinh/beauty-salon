@@ -45,11 +45,14 @@ class IndexController extends Controller
     }
 
     /**
+     * @param Request $request
      * @return Factory|View
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('static.index', ['brands' => $this->brandsService->getAllBrands()]);
+        return view('static.index', array_merge([
+            'brands' => $this->brandsService->getAllBrands()
+        ], $this->getOptions($request)));
     }
 
     /**

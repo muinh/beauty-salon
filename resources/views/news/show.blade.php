@@ -19,7 +19,7 @@
                 </ul>
                 <div class="margin-bottom-40 margin-top-30">
                     <div class="blog-img">
-                        <img class="img-responsive" src="{{ asset('storage/' . $article->mainImage) }}" alt="{{ $article->name }}">
+                        <img class="img-responsive" src="{{ asset($assetsSrc . $article->mainImage) }}" alt="{{ $article->name }}">
                     </div>
                     {{ $article->content }}
                 </div>
@@ -30,8 +30,8 @@
                     @if(!is_null($images))
                         @foreach($images as $image)
                             <div class="col-md-3 col-sm-6 col-xs-6">
-                                <a class="fancybox" data-rel="fancybox-button" href="{{ asset('storage/' . $image) }}">
-                                    <img class="img-responsive margin-bottom-20" src="{{ asset('storage/' . $image) }}" />
+                                <a class="fancybox" data-rel="fancybox-button" href="{{ asset($assetsSrc . $image) }}">
+                                    <img class="img-responsive margin-bottom-20" src="{{ asset($assetsSrc . $image) }}" />
                                 </a>
                             </div>
                         @endforeach

@@ -11,7 +11,7 @@
                     @foreach($categories as $category)
                         <div class="col-md-4 col-sm-6 prodotti-item">
                             <a href="{{ route('show-products-by-category', ['locale' => 'en', 'id' => $category->id]) }}">
-                                <img class="img-responsive" src="{{ asset('storage/' . $category->image)  }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $category->image)  }}">
                                 <div class="text-center prod-label">
                                     {{ $category->title }}
                                 </div>

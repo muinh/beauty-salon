@@ -6,7 +6,7 @@
         <div class="row magazine-page margin-bottom-60">
             <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
                 <div class="item active">
-                    <img src="{{ asset('storage/' . $sliderRand->image) }}" style="width:100%">
+                    <img src="{{ asset($assetsSrc . $sliderRand->image) }}" style="width:100%">
                     <div class="carousel-caption"><p></p></div>
                 </div>
                 {!! __('vocabulary.historyText') !!}

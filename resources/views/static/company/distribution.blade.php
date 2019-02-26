@@ -45,7 +45,7 @@
                             <div class="distributorebox">
                                 <hr>
                                 <h3 class="title-v4">{{ $dealer->name }}</h3>
-                                <img class="img-responsive margin-bottom-30" src="{{ asset('storage/' . $dealer->image) }}" alt="{{ $dealer->name }}">
+                                <img class="img-responsive margin-bottom-30" src="{{ asset($assetsSrc . $dealer->image) }}" alt="{{ $dealer->name }}">
                                 {{ $dealer->address }}
                                 <div class="google-map margin-top-30">
                                     <iframe src="{{ $dealer->map }}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -15,8 +15,8 @@
                             @if(!is_null($images))
                                 @foreach($images as $image)
                                     <div class="col-md-2 col-xs-4">
-                                        <a class="fancybox" href="{{ asset('storage/' . $image) }}" data-rel="fancybox-button">
-                                            <img class="img-responsive" src="{{ asset('storage/' . $image) }}">
+                                        <a class="fancybox" href="{{ asset($assetsSrc . $image) }}" data-rel="fancybox-button">
+                                            <img class="img-responsive" src="{{ asset($assetsSrc . $image) }}">
                                         </a>
                                     </div>
                                 @endforeach

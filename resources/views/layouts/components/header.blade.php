@@ -21,6 +21,7 @@
                                 <a href="{{ url('/it') }}"><img src="{{ asset('/img/flags/it.png') }}" alt="Entra"></a>
                                 <a href="{{ url('/en') }}"><img src="{{ asset('/img/flags/en.png') }}" alt="Enter"></a>
                                 <a href="{{ url('/fr') }}"><img src="{{ asset('/img/flags/fr.png') }}" alt="Entrer"></a>
+                                <a href="{{ url('/ru') }}"><img src="{{ asset('/img/flags/ru.png') }}" alt="Вход"></a>
                                 <a href="{{ url('/es') }}"><img src="{{ asset('/img/flags/es.png') }}" alt="Entrar"></a>
                                 <a href="{{ url('/de') }}"><img src="{{ asset('/img/flags/de.png') }}" alt="Eingeben"></a>
                             </li>

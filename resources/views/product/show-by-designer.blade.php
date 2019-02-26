@@ -8,7 +8,7 @@
                 <h1>{{ $designer->name }}</h1>
                 <div class="margin-bottom-30">
                     <div class="blog-img">
-                        <img class="img-responsive" src="{{ asset('storage/' . $designer->image) }}">
+                        <img class="img-responsive" src="{{ asset($assetsSrc . $designer->image) }}">
                     </div>
                     <div>
                         <div>{{ $designer->description }}</div>
@@ -27,7 +27,7 @@
                             <div class="col-md-4 prodotti-item">
                                 <div class="text-center prod-label">
                                     <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                        <img class="img-responsive" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}">
+                                        <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
                                         <div class="text-center prod-label">
                                             <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
                                         </div>

@@ -11,4 +11,5 @@ class AppBag
     const MAX_SLIDER_PRODUCTS = 4;
     const MAX_RANDOM_PRODUCTS = 6;
     const MAX_LATEST_NEWS = 3;
+    const ASSETS_SRC = 'storage/';
 }

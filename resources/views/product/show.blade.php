@@ -10,7 +10,7 @@
                 <div class="row margin-bottom-30">
                     <div class="col-md-7" style="margin-bottom: 30px;">
                         <div class="margin-bottom-20 border-ddd">
-                            <img class="img-responsive" id="productimg" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}">
+                            <img class="img-responsive" id="productimg" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
                         </div>
                         <a href="{{ route('show-catalog-request-form', ['locale' => $locale]) }}" class="btn btn-sm rounded btn-default" role="button">
                             <i class="fa fa-book"></i>&nbsp {{ __('vocabulary.catalogRequest') }}
@@ -60,7 +60,7 @@
                     @foreach($similarProducts as $product)
                             <div class="col-md-3 col-sm-6 col-xs-6 prodotti-item">
                                 <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                    <img class="img-responsive" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}">
+                                    <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
                                     <div class="text-center prod-label small">
                                         <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
                                     </div>
@@ -74,7 +74,7 @@
                     @foreach($sameLineProducts as $product)
                         <div class="col-md-3 col-sm-6 col-xs-6 prodotti-item">
                             <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                <img class="img-responsive" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
                                 <div class="text-center prod-label small">
                                     <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
                                 </div>
@@ -94,8 +94,8 @@
                                     @if(!is_null($images))
                                         @foreach($images as $index => $image)
                                             <div class="col-xs-2">
-                                                <a href="{{ asset('storage/' . $image) }}" class="fancybox" data-rel="fancybox-button">
-                                                    <img class="img-responsive" src="{{ asset('storage/' . $image) }}">
+                                                <a href="{{ asset($assetsSrc . $image) }}" class="fancybox" data-rel="fancybox-button">
+                                                    <img class="img-responsive" src="{{ asset($assetsSrc . $image) }}">
                                                 </a>
                                             </div>
                                         @endforeach

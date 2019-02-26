@@ -95,7 +95,8 @@ class Controller extends BaseController
                 ->inRandomOrder()
                 ->first(),
             'sidebarTemplate' => '/' . $this->locale . AppBag::CATEGORY_SIDEBAR_TEMPLATE,
-            'locale' => array_get($params, 'locale') ?? $this->locale
+            'locale' => array_get($params, 'locale') ?? $this->locale,
+            'assetsSrc' => AppBag::ASSETS_SRC
         ];
     }
 }

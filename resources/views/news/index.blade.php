@@ -11,8 +11,7 @@
                     <div class="row blog blog-medium">
                         <div class="col-md-4">
                             <a href="{{ route('show-news', ['locale' => $locale, 'newsId' => $article->id]) }}">
-                                {{--{{ dd($article) }}--}}
-                                <img class="img-responsive" src="{{ asset('storage/' . $article->mainImage) }}" alt="{{ $article->name }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $article->mainImage) }}" alt="{{ $article->name }}">
                             </a>
                         </div>
                         <div class="col-md-8">

@@ -9,7 +9,7 @@
             <ul>
                 @foreach($sliders as $slider)
                     <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000">
-                        <img class="homeimage" src="{{ asset('storage/' . $slider->image) }}" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                        <img class="homeimage" src="{{ asset($assetsSrc . $slider->image) }}" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                     </li>
                 @endforeach
             </ul>
@@ -61,7 +61,7 @@
                                             'categoryId' => $product->category_id,
                                             'productId' => $product->id
                                         ]) }}">
-                                    <img class="img-responsive" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}" />
+                                    <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}" />
                                 </a>
                                 <div class="inner-team">
                                     <h3>
@@ -99,7 +99,7 @@
                                 @foreach($images as $index => $image)
                                     @if($index === 0)
                                         <div class="thumbnail-img">
-                                            <img class="img-responsive" src="{{ asset('storage/' . $image) }}" alt="{{ $article->name }}">
+                                            <img class="img-responsive" src="{{ asset($assetsSrc . $image) }}" alt="{{ $article->name }}">
                                         </div>
                                     @endif
                                 @endforeach

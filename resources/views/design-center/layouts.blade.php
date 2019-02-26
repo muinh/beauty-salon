@@ -18,8 +18,8 @@
                                     <div class="row blog blog-medium">
                                         @foreach($images as $index => $image)
                                             <div class="col-md-3 col-xs-3">
-                                                <a class="fancybox" href="{{ asset('storage/' . $image) }}" data-rel="fancybox-button">
-                                                    <img class="img-responsive" src="{{ asset('storage/' . $image) }}">
+                                                <a class="fancybox" href="{{ asset($assetsSrc . $image) }}" data-rel="fancybox-button">
+                                                    <img class="img-responsive" src="{{ asset($assetsSrc . $image) }}">
                                                 </a>
                                             </div>
                                         @endforeach
