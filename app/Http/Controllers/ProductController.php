@@ -48,17 +48,23 @@ class ProductController extends Controller
     {
         $params = $request->route()->parameters();
         $productId = array_get($params, 'productId');
-        $product = $this->productService->getById($productId);
+        $product = $this->productService->getById($productId, array_get($params, 'locale'));
+        $category = $this->categoryService->getBySlug($product->categorySlug);
+        $line = $this->lineService->getBySlug($product->lineSlug);
+        $designer = $this->designerService->getBySlug($product->designerSlug);
         $categories = array_get($this->getOptions($request), 'categories');
         $lines = array_get($this->getOptions($request), 'lines');
 
         return view('product.show', array_merge([
             'product' => $product,
-            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-            'similarProducts' => $this->productService->getSimilarProducts($product),
+            'category' => $category,
+            'line' => $line,
+            'designer' => $designer,
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+            'similarProducts' => $this->productService->getSimilarProducts($product, array_get($params, 'locale')),
             'sameLineProducts' => $this->productService->getSameLineProducts($product),
-            'steps' => ['Products', $product->categoryId->title]
+            'steps' => [__('vocabulary.products'), $product->name]
         ], $this->getOptions($request)));
     }
 
@@ -69,18 +75,18 @@ class ProductController extends Controller
     public function showByCategory(Request $request)
     {
        $params = $request->route()->parameters();
-       $categoryId = array_get($params, 'categoryId');
-       $category = $this->categoryService->getById($categoryId);
+       $categorySlug = array_get($params, 'slug');
+       $category = $this->categoryService->getBySlug($categorySlug, array_get($this->getOptions($request), 'locale'));
        $categories = array_get($this->getOptions($request), 'categories');
        $lines = array_get($this->getOptions($request), 'lines');
 
        return view('product.show-filtered', array_merge([
            'brands' => $this->brandsService->getAllBrands(),
            'category' => $category,
-           'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-           'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-           'products' => $this->productService->getByCategory($categoryId),
-           'steps' => ['Products', $category->title]
+           'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+           'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+           'products' => $this->productService->getByCategory($categorySlug, array_get($this->getOptions($request), 'locale')),
+           'steps' => [__('vocabulary.categories'), $category->title]
        ], $this->getOptions($request)));
     }
 
@@ -92,18 +98,18 @@ class ProductController extends Controller
     {
         $params = $request->route()->parameters();
         $brandId = array_get($params, 'brandId');
-        $categoryId = array_get($params, 'categoryId');
-        $category = $this->categoryService->getById($categoryId);
+        $categorySlug = array_get($params, 'categorySlug');
+        $category = $this->categoryService->getBySlug($categorySlug, array_get($this->getOptions($request), 'locale'));
         $categories = array_get($this->getOptions($request), 'categories');
         $lines = array_get($this->getOptions($request), 'lines');
 
         return view('product.show-filtered', array_merge([
             'brands' => $this->brandsService->getAllBrands(),
             'category' => $category,
-            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-            'products' => $this->productService->getByBrandAndCategory($brandId, $categoryId),
-            'steps' => ['Products', $category->title]
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+            'products' => $this->productService->getByBrandAndCategory($brandId, $categorySlug),
+            'steps' => [__('vocabulary.products') . ' - ' . __('vocabulary.salonLayouts'), $category->title]
         ], $this->getOptions($request)));
     }
 
@@ -114,17 +120,17 @@ class ProductController extends Controller
     public function showByLine(Request $request)
     {
         $params = $request->route()->parameters();
-        $lineId = array_get($params, 'lineId');
-        $line = $this->lineService->getById($lineId);
+        $lineSlug = array_get($params, 'slug');
+        $line = $this->lineService->getBySlug($lineSlug, array_get($this->getOptions($request), 'locale'));
         $categories = array_get($this->getOptions($request), 'categories');
         $lines = array_get($this->getOptions($request), 'lines');
 
         return view('product.show-by-line', array_merge([
             'line' => $line,
-            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-            'products' => $this->productService->getByLine($lineId),
-            'steps' => ['Products', $line->name]
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+            'products' => $this->productService->getByLine($lineSlug, array_get($this->getOptions($request), 'locale')),
+            'steps' => [__('vocabulary.products') . ' - ' . __('vocabulary.salonLayouts'), $line->name ?? '']
         ], $this->getOptions($request)));
     }
 
@@ -135,20 +141,20 @@ class ProductController extends Controller
     public function showByDesigner(Request $request)
     {
         $params = $request->route()->parameters();
-        $designerId = array_get($params, 'designerId');
-        $designer = $this->designerService->getById($designerId);
+        $designerSlug = array_get($params, 'slug');
+        $designer = $this->designerService->getBySlug($designerSlug, array_get($this->getOptions($request), 'locale'));
         $designers = array_get($this->getOptions($request), 'designers');
-        $designerMenus = $designers !== null ? $designers->pluck('name', 'id') : null;
+        $designerMenus = $designers !== null ? $designers->pluck('title', 'slug') : null;
         $categories = array_get($this->getOptions($request), 'categories');
         $lines = array_get($this->getOptions($request), 'lines');
 
         return view('product.show-by-designer', array_merge([
             'designer' => $designer,
-            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-            'products' => $this->productService->getByDesigner($designerId),
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+            'products' => $this->productService->getByDesigner($designerSlug, array_get($this->getOptions($request), 'locale')),
             'designerMenus' => $designerMenus,
-            'steps' => ['Designer - ' . $designer->name]
+            'steps' => [__('vocabulary.designer') . ' - ' . $designer->name]
         ], $this->getOptions($request)));
     }
 
@@ -159,9 +165,13 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $params = $request->request->all();
+        $categories = array_get($this->getOptions($request), 'categories');
+        $lines = array_get($this->getOptions($request), 'lines');
 
         return view('product.search', array_merge([
-            'products' => $this->productService->searchByNameOrCode(array_get($params, 'term'))
+            'products' => $this->productService->searchByNameOrCode(array_get($params, 'term')),
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
         ], $this->getOptions($request)));
     }
 }

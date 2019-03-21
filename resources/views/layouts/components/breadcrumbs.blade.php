@@ -1,7 +1,7 @@
 <div class="breadcrumbs page-title">
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="{{ route('home', ['locale' => $locale]) }}">Home</a></li>
+            <li><a href="{{ route('home', ['locale' => $locale]) }}">{{__('vocabulary.home')}}</a></li>
             @if(isset($steps))
                 @foreach($steps as $index => $step)
                     @if($index === count($steps) - 1)

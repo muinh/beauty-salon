@@ -4,7 +4,7 @@ $generalInfo = \App\Models\GeneralInfoEn::all()->first();
 
 return [
     //*** Meta Information ***//
-    'metaDescription'   =>  'Gamma & Bross is leader in the design and manufacturing of beauty salon furniture and hair salon equipment.',
+    'metaDescription'   =>  'Takara Belmont | Duso official distributor',
 
     //*** Navigation Bar ***//
     'home'                  =>  'Home',
@@ -38,6 +38,8 @@ return [
     'productsFound'         =>  'Products found',
     'catalogRequest'        =>  'CATALOG REQUEST',
     'website'               =>  'Website',
+    'distributorText'       =>  'Official distributor',
+    'search'                =>  'Search',
 
 
     //*** Side Bar ***//
@@ -46,8 +48,6 @@ return [
 
     //*** Footer ***//
     'rightsReserved'        =>  'All rights reserved',
-    'footerText'            =>  'P.IVA 01431270204',
-    'footerText2'           =>  'Via Mazzini 62E, Castiglione Stiviere MN - Tel +390376632630-',
 
     //*** Basic ***//
     'more'                  =>  'More',
@@ -137,5 +137,6 @@ return [
     'welcomeLaunchPad'      =>  'Welcome to the LAUNCH PAD for the Flash Interactive version of the Salon Planner for salon design',
     'launchPadText'         =>  $generalInfo['salon_planner_content'],
     'emailsContacts'        =>  $generalInfo['contacts_emails_content'],
-    'emailsMapLink'         =>  $generalInfo['contacts_googlemaps_link']
+    'emailsMapLink'         =>  $generalInfo['contacts_googlemaps_link'],
+    'notFound'              =>  'Page not found'
 ];

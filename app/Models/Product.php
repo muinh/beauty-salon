@@ -13,7 +13,7 @@ class Product extends Model
      */
     protected $fillable = [
         'name', 'code', 'features', 'category_id', 'line_id', 'designer_id',
-        'brand_id', 'dimensions_inch', 'dimensions_cm'
+        'brand_id', 'dimensions_inch', 'dimensions_cm', 'images'
     ];
 
     public function brandId()

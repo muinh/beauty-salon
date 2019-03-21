@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.categories') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -10,7 +13,7 @@
                 <div class="row">
                     @foreach($categories as $category)
                         <div class="col-md-4 col-sm-6 prodotti-item">
-                            <a href="{{ route('show-products-by-category', ['locale' => 'en', 'id' => $category->id]) }}">
+                            <a href="{{ route('show-products-by-category', ['locale' => $locale, 'slug' => $category->slug]) }}">
                                 <img class="img-responsive" src="{{ asset($assetsSrc . $category->image)  }}">
                                 <div class="text-center prod-label">
                                     {{ $category->title }}

@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.catalogRequests') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -11,7 +14,7 @@
                     <img src="{{ asset($assetsSrc . $sliderRand->image) }}" style="width:100%">
                     <div class="carousel-caption"><p></p></div>
                 </div>
-                <p> <strong>{{ env('APP_NAME') }}</strong> catalog.</p>
+                <p> <strong>{{ env('APP_NAME') }}</strong> {{__('emails.catalog')}}.</p>
                 <form id="catalog-request" name="catalog-request" method="post" action="{{ route('handle-catalog-request', ['locale' => $locale]) }}" enctype="multipart/form-data" >
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="tag-box tag-box-v3 form-page">
@@ -124,7 +127,8 @@
                                 <div class="col-sm-12">
                                     <div class="checkbox">
                                         <label>
-                                            <input name="distributor" type="checkbox" id="distributor" value="{{ __('emails.distributor') }}">{{ __('emails.distributor') }} <span style="font-size:12px">(please use space below to send any additional information)</span>
+                                            <input name="distributor" type="checkbox" id="distributor" value="{{ __('emails.distributor') }}">{{ __('emails.distributor') }}
+                                            <span style="font-size:12px">({{ __('emails.pleaseUse') }})</span>
                                         </label>
                                     </div>
                                 </div>
@@ -208,7 +212,7 @@
                                 </div>
                                 <div class="col-sm-4 margin-top-10">
                                     <div class="form-group">
-                                        <p>{{ __('emails.armchair') }}:</p>
+                                        <p>{{ __('emails.armchairs') }}:</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-2 margin-top-10">

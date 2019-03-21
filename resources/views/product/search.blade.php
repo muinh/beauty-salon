@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.search') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -24,9 +27,9 @@
                     @foreach($products as $product)
                         <div class="col-md-4 col-sm-6 prodotti-item">
                             <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                <img class="img-responsive" src="{{ $product->mainImage }}" alt="{{ $product->name }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $product->mainImage ) }}" alt="{{ $product->name }}">
                                 <div class="text-center prod-label">
-                                    <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
+                                    <span class="prod-color" style="background-color: {{ $product->brandColor }}">&nbsp;</span>{{ $product->translatedName ?? $product->name }}
                                 </div>
                             </a>
                         </div>

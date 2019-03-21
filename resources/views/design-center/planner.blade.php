@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.salonPlanner') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -31,7 +34,7 @@
                     </div>
                     <hr>
                     <h2>{{ __('vocabulary.welcomeLaunchPad') }}</h2>
-                    <p>{{ __('vocabulary.launchPadText') }}</p>
+                    <p>{!! __('vocabulary.launchPadText') !!}</p>
                 </div>
             </div>
             @include('layouts.components.sidebar', ['menuType' => 'design-center', 'brands' => $brands])

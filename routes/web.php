@@ -21,11 +21,11 @@ Route::prefix('{locale?}')->middleware('locale')->group(function() {
     Route::get('company-distribution-europe/{country?}', 'CompanyPageController@showDistributionEuropePage')->name('company-distribution-europe');
 
     Route::get('categories/', 'CategoryController@index')->name('show-categories');
-    Route::get('categories/{categoryId}', 'ProductController@showByCategory')->name('show-products-by-category');
-    Route::get('categories/{categoryId}/products/{productId}', 'ProductController@show')->name('show-product');
-    Route::get('brands/{brandId}/categories/{categoryId}', 'ProductController@showByBrandAndCategory')->name('show-products-by-brand');
-    Route::get('lines/{lineId}', 'ProductController@showByLine')->name('show-products-by-line');
-    Route::get('designers/{designerId}', 'ProductController@showByDesigner')->name('show-products-by-designer');
+    Route::get('categories/{slug}', 'ProductController@showByCategory')->name('show-products-by-category');
+    Route::get('categories/{slug}/products/{productId}', 'ProductController@show')->name('show-product');
+    Route::get('brands/{brandId}/categories/{categorySlug}', 'ProductController@showByBrandAndCategory')->name('show-products-by-brand');
+    Route::get('lines/{slug}', 'ProductController@showByLine')->name('show-products-by-line');
+    Route::get('designers/{slug}', 'ProductController@showByDesigner')->name('show-products-by-designer');
     Route::any('search', 'ProductController@search')->name('search');
 
     Route::get('design-center/layouts', 'DesignCenterController@showLayouts')->name('show-salon-layouts');

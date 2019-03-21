@@ -1,5 +1,7 @@
 @extends('layouts.base')
-@section('title', 'Beauty & hair salon furniture & equipment - Gamma & Bross')
+@section('title')
+    {{ $title =  __('vocabulary.home') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     <div class="wrapper" style="padding: 0;">
         <div class="prehome-head">
@@ -47,12 +49,9 @@
                              data-endeasing="Power1.easeIn"
                              data-captionhidden="off"
                              style="z-index: 6; margin-top: 100px;">
-                            <a href="{{ url('/it') }}"><img src="{{ asset('/img/flags/it.png') }}" alt="Entra"></a>
-                            <a href="{{ url('/en') }}"><img src="{{ asset('/img/flags/en.png') }}" alt="Enter"></a>
-                            <a href="{{ url('/fr') }}"><img src="{{ asset('/img/flags/fr.png') }}" alt="Entrer"></a>
-                            <a href="{{ url('/ru') }}"><img src="{{ asset('/img/flags/ru.png') }}" alt="Вход"></a>
-                            <a href="{{ url('/es') }}"><img src="{{ asset('/img/flags/es.png') }}" alt="Entrar"></a>
-                            <a href="{{ url('/de') }}"><img src="{{ asset('/img/flags/de.png') }}" alt="Eingeben"></a>
+                            <a href="{{ url('/ua') }}"><img class="flag-picture" src="{{ asset('/img/flags/ua.png') }}" alt="Вхід"></a>
+                            <a href="{{ url('/ru') }}"><img class="flag-picture" src="{{ asset('/img/flags/ru.png') }}" alt="Вход"></a>
+                            <a href="{{ url('/en') }}"><img class="flag-picture" src="{{ asset('/img/flags/en.png') }}" alt="Enter"></a>
 
                         </div>
                     </li>

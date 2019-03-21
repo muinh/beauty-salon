@@ -14,16 +14,13 @@
                 <div class="col-xs-6 text-right">
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm dropdown-toggle top-menu-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="{{ asset('/img/flags/en.png') }}" alt="en">&nbsp<i class="fa fa-angle-down"></i>
+                            <img src="{{ asset("/img/flags/$locale.png") }}" alt="{{ $locale }}">&nbsp<i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right lang-menu">
                             <li>
-                                <a href="{{ url('/it') }}"><img src="{{ asset('/img/flags/it.png') }}" alt="Entra"></a>
-                                <a href="{{ url('/en') }}"><img src="{{ asset('/img/flags/en.png') }}" alt="Enter"></a>
-                                <a href="{{ url('/fr') }}"><img src="{{ asset('/img/flags/fr.png') }}" alt="Entrer"></a>
-                                <a href="{{ url('/ru') }}"><img src="{{ asset('/img/flags/ru.png') }}" alt="Вход"></a>
-                                <a href="{{ url('/es') }}"><img src="{{ asset('/img/flags/es.png') }}" alt="Entrar"></a>
-                                <a href="{{ url('/de') }}"><img src="{{ asset('/img/flags/de.png') }}" alt="Eingeben"></a>
+                                <a href="{{ url('/ua') }}"><img src="{{ asset('/img/flags/ua.png') }}" alt="Українська"></a>
+                                <a href="{{ url('/ru') }}"><img src="{{ asset('/img/flags/ru.png') }}" alt="Русский"></a>
+                                <a href="{{ url('/en') }}"><img src="{{ asset('/img/flags/en.png') }}" alt="English"></a>
                             </li>
                         </ul>
                         <button type="button" class="btn btn-sm top-menu-btn">
@@ -46,7 +43,11 @@
 
                 <!-- Navbar Brand -->
                 <div class="navbar-brand"  >
-                    <a href="{{ route('home', ['locale' => $locale]) }}"> <img alt="{{ config('app.name') }}" class="shrink-logo" src="{{ asset('img/logo.png') }}" > </a>
+                    <a href="{{ route('home', ['locale' => $locale]) }}">
+                        <img alt="{{ config('app.name') }}" class="shrink-logo" src="{{ asset('img/logo.png') }}" style="width: 55px!important;height: 55px!important;margin-right: 10px;">
+                        <img alt="{{ config('app.name') }}" class="shrink-logo-right" src="{{ asset('img/logo-gamm.png') }}" style="width: 184px!important;">
+                    </a>
+                    <p class="distributor-text">{{ __('vocabulary.distributorText') }}</p>
                 </div>
                 <!-- ENd Navbar Brand -->
 
@@ -77,7 +78,7 @@
                                 <li class="divider"></li>
                                 @foreach($categories as $category)
                                     <li>
-                                        <a href="{{ route('show-products-by-category', ['locale' => $locale, 'categoryId' => $category->id]) }}">
+                                        <a href="{{ route('show-products-by-category', ['locale' => $locale, 'slug' => $category->slug]) }}">
                                             {{ $category->title }}
                                         </a>
                                     </li>
@@ -87,12 +88,12 @@
                         <!-- End Dropdpwn Categorie -->
                         <!-- Start Dropdpwn Linee -->
                         <li class="dropdown">
-                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button">Lines</a>
+                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{ __('vocabulary.lines') }}</a>
                             <ul class="dropdown-menu">
                                 @foreach($lines as $line)
                                     <li>
-                                        <a href="{{ route('show-products-by-line', ['locale' => $locale, 'lineId' => $line->id]) }}">
-                                            {{ $line->name }}
+                                        <a href="{{ route('show-products-by-line', ['locale' => $locale, 'slug' => $line->slug]) }}">
+                                            {{ $line->title }}
                                         </a>
                                     </li>
                                 @endforeach()
@@ -104,8 +105,8 @@
                             <ul class="dropdown-menu">
                                 @foreach($designers as $designer)
                                     <li>
-                                        <a href="{{ route('show-products-by-designer', ['locale' => $locale, 'designerId' => $designer->id]) }}">
-                                            {{ $designer->name }}
+                                        <a href="{{ route('show-products-by-designer', ['locale' => $locale, 'slug' => $designer->slug]) }}">
+                                            {{ $designer->title }}
                                         </a>
                                     </li>
                                 @endforeach()

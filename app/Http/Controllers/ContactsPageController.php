@@ -17,7 +17,7 @@ class ContactsPageController extends Controller
     public function showEmailsPage(Request $request)
     {
         return view('static.contacts.emails', array_merge([
-            'steps' => ['Contacts - Emails']
+            'steps' => [__('vocabulary.contacts') . ' - ' . __('vocabulary.emails')]
         ], $this->getOptions($request)));
     }
 
@@ -28,7 +28,7 @@ class ContactsPageController extends Controller
     public function showInfoRequestPage(Request $request)
     {
         return view('static.contacts.info-request', array_merge([
-            'steps' => ['Contacts - Info Request']
+            'steps' => [__('vocabulary.contacts') . ' - ' . __('vocabulary.infoRequests')]
         ], $this->getOptions($request)));
     }
 
@@ -39,7 +39,7 @@ class ContactsPageController extends Controller
     public function showSendApplicationPage(Request $request)
     {
         return view('static.contacts.send-application', array_merge([
-            'steps' => ['Contacts - Send Application']
+            'steps' => [__('vocabulary.contacts') . ' - ' .  __('vocabulary.sendApplication')]
         ], $this->getOptions($request)));
     }
 
@@ -50,7 +50,7 @@ class ContactsPageController extends Controller
     public function showCatalogRequestPage(Request $request)
     {
         return view('static.contacts.catalog-request', array_merge([
-            'steps' => ['Contacts - Catalog Request']
+            'steps' => [__('vocabulary.contacts') . ' - ' .  __('vocabulary.catalogRequests')]
         ], $this->getOptions($request)));
     }
 

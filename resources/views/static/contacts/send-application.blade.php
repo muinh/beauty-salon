@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.sendApplication') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -11,7 +14,7 @@
                     <img src="{{ asset($assetsSrc . $sliderRand->image) }}" style="width:100%">
                     <div class="carousel-caption"><p></p></div>
                 </div>
-                <h4>Job openings:</h4>
+                <h4>{{ __('emails.jobOpenings') }}:</h4>
                 <p>{{ env('APP_NAME') }} {{ __('emails.lookingFor') }}:</p>
                 <form id="send-application" name="send-application" method="post" action="{{ route('handle-send-application', ['locale' => $locale]) }}" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

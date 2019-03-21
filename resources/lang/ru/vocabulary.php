@@ -4,7 +4,7 @@ $generalInfo = \App\Models\GeneralInfoEn::all()->first();
 
 return [
     //*** Meta Information ***//
-    'metaDescription'   =>  'Gamma & Bross - лидер в дизайне и производстве мебели для салонов красоты, а также парикмахерских.',
+    'metaDescription'   =>  'Takara Belmont | Duso официальный дистрибьютор',
 
     //*** Navigation Bar ***//
     'home'                  =>  'Главная',
@@ -38,6 +38,8 @@ return [
     'productsFound'         =>  'Товаров найдено',
     'catalogRequest'        =>  'ЗАПРОС КАТАЛОГОВ',
     'website'               =>  'Вебсайт',
+    'distributorText'       =>  'Официальный дистрибьютор',
+    'search'                =>  'Поиск',
 
 
     //*** Side Bar ***//
@@ -46,8 +48,6 @@ return [
 
     //*** Footer ***//
     'rightsReserved'        =>  'Все права защищены',
-    'footerText'            =>  'P.IVA 01431270204',
-    'footerText2'           =>  'Via Mazzini 62E, Castiglione Stiviere MN - Tel +390376632630-',
 
     //*** Basic ***//
     'more'                  =>  'Узнать больше',
@@ -137,5 +137,6 @@ return [
     'welcomeLaunchPad'      =>  'Добро пожаловать в интерактивную версию Планировщика Салона',
     'launchPadText'         =>  $generalInfo['salon_planner_content'],
     'emailsContacts'        =>  $generalInfo['contacts_emails_content'],
-    'emailsMapLink'         =>  $generalInfo['contacts_googlemaps_link']
+    'emailsMapLink'         =>  $generalInfo['contacts_googlemaps_link'],
+    'notFound'              =>  'Страница не найдена'
 ];

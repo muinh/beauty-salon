@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.showrooms') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -9,10 +12,10 @@
                 <div class="clear-both margin-bottom-30"></div>
                 @foreach($showrooms as $showroom)
                     <div class="margin-bottom-30">
-                        <h2>{{ $showroom->title }}</h2>
+                        <h2>{{ $showroom->name ?? $showroom->title }}</h2>
                         <div class="row blog blog-medium">
-                            <div class="col-md-5"><b>{{ $showroom->name }}</b><br>
-                                {{ $showroom->contacts }}
+                            <div class="col-md-5"><b>{{ $showroom->name ?? $showroom->title }}</b><br>
+                                {{ $showroom->description ?? $showroom->contacts }}
                             </div>
                             <div class="col-md-7">
                                 <div class="row">
@@ -20,8 +23,8 @@
                                     @if(!is_null($images))
                                         @foreach($images as $image)
                                             <div class="col-md-4 col-xs-6">
-                                                <a class="fancybox" href="{{ asset($assetsSrc . $image) }}" data-rel="fancybox-button" title="{{ $showroom->title }}">
-                                                    <img class="img-responsive margin-bottom-20" src="{{ asset($assetsSrc . $image) }}" alt="{{ $showroom->name }}">
+                                                <a class="fancybox" href="{{ asset($assetsSrc . $image) }}" data-rel="fancybox-button" title="{{ $showroom->name ?? $showroom->title }}">
+                                                    <img class="img-responsive margin-bottom-20" src="{{ asset($assetsSrc . $image) }}" alt="{{ $showroom->name ?? $showroom->title }}">
                                                 </a>
                                             </div>
                                         @endforeach

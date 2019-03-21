@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  $product->name . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -10,7 +13,7 @@
                 <div class="row margin-bottom-30">
                     <div class="col-md-7" style="margin-bottom: 30px;">
                         <div class="margin-bottom-20 border-ddd">
-                            <img class="img-responsive" id="productimg" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
+                            <img class="img-responsive" id="productimg" src="{{ asset($assetsSrc . $product->mainImage) }}" alt="{{ $product->name }}">
                         </div>
                         <a href="{{ route('show-catalog-request-form', ['locale' => $locale]) }}" class="btn btn-sm rounded btn-default" role="button">
                             <i class="fa fa-book"></i>&nbsp {{ __('vocabulary.catalogRequest') }}
@@ -28,20 +31,21 @@
                         <b>{{ $product->code }}</b>
                         <hr>
                         <h6><i class="fa fa-info-circle"></i>&nbsp;{{ __('vocabulary.features') }}:</h6>
-                        <p>{{ $product->features }}</p>
+                        <p>{{ $product->description }}</p>
                         <hr>
                         <h6><i class="fa fa-tag"></i>&nbsp;{{ __('vocabulary.categories') }}:</h6>
-                        <b><a href="{{ route('show-products-by-category', ['locale' => $locale, 'categoryId' => $product->category_id]) }}">{{ $product->categoryId->title }}</a></b>
+                        <b><a href="{{ route('show-products-by-category', ['locale' => $locale, 'slug' => $product->categorySlug]) }}">{{ $category->title ?? $product->categoryTitle }}</a></b>
                         <hr>
                         <h6><i class="fa fa-shopping-bag"></i>&nbsp;{{ __('vocabulary.lines') }}:</h6>
-                        <b><a href="{{ route('show-products-by-line', ['locale' => $locale, 'lineId' => $product->line_id]) }}">{{ $product->lineId->name }}</a></b>
+                        <b><a href="{{ route('show-products-by-line', ['locale' => $locale, 'slug' => $product->lineSlug]) }}">{{ $line->name ?? $product->lineTitle }}</a></b>
+                        <hr>
                         <h6><i class="fa fa-user"></i>&nbsp;{{ __('vocabulary.designer') }}:</h6>
-                        <b><a href="{{ route('show-products-by-designer', ['locale' => $locale, 'designerId' => $product->designer_id]) }}">{{ $product->designerId->name }}</a></b>
+                        <b><a href="{{ route('show-products-by-designer', ['locale' => $locale, 'slug' => $product->designerSlug]) }}">{{ $designer->name ?? $product->designerName}}</a></b>
                         <hr>
                         <h6><i class="fa fa-arrows"></i>&nbsp;{{ __('vocabulary.dimensions') }}:</h6>
                         <b>
-                        {{ $product->dimensions_cm }}<br>
-                        <small>{{ $product->dimensions_inch }}</small>
+                        {{ $product->dimensionsCm }}<br>
+                        <small>{{ $product->dimensionsInch }}</small>
                         </b>
                         <hr>
                     </div>
@@ -57,12 +61,12 @@
                 <hr class="hr-xs">
                 <h4>{{ __('vocabulary.similarProducts') }}</h4>
                 <div class="row margin-bottom-30 margin-top-30">
-                    @foreach($similarProducts as $product)
+                    @foreach($similarProducts as $similarProduct)
                             <div class="col-md-3 col-sm-6 col-xs-6 prodotti-item">
-                                <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                    <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
+                                <a href="{{ route('show-product', ['locale' => $locale, 'slug' => $similarProduct->categorySlug, 'productId' => $similarProduct->id]) }}">
+                                    <img class="img-responsive" src="{{ asset($assetsSrc . $similarProduct->mainImage) }}" alt="{{ $similarProduct->name }}">
                                     <div class="text-center prod-label small">
-                                        <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
+                                        <span class="prod-color" style="background-color: {{ $similarProduct->brandColor }}">&nbsp;</span>{{ $similarProduct->name }}
                                     </div>
                                 </a>
                             </div>
@@ -71,12 +75,12 @@
                 <hr>
                 <h4>{{ __('vocabulary.sameLine') }}</h4>
                 <div class="row margin-bottom-30 margin-top-30">
-                    @foreach($sameLineProducts as $product)
+                    @foreach($sameLineProducts as $sameProduct)
                         <div class="col-md-3 col-sm-6 col-xs-6 prodotti-item">
-                            <a href="{{ route('show-product', ['locale' => $locale, 'categoryId' => $product->category_id, 'productId' => $product->id]) }}">
-                                <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}">
+                            <a href="{{ route('show-product', ['locale' => $locale, 'slug' => $sameProduct->categorySlug, 'productId' => $sameProduct->id]) }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $sameProduct->mainImage) }}" alt="{{ $sameProduct->name }}">
                                 <div class="text-center prod-label small">
-                                    <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
+                                    <span class="prod-color" style="background-color: {{ $sameProduct->brandColor }}">&nbsp;</span>{{ $sameProduct->name }}
                                 </div>
                             </a>
                         </div>

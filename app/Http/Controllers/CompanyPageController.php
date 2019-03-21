@@ -41,7 +41,7 @@ class CompanyPageController extends Controller
     public function showProfilePage(Request $request)
     {
         return view('static.company.profile', array_merge([
-            'steps' => ['Company - Profile'],
+            'steps' => [__('vocabulary.company') . ' - ' . __('vocabulary.profile')],
         ], $this->getOptions($request)));
     }
 
@@ -52,7 +52,7 @@ class CompanyPageController extends Controller
     public function showPhilosophyPage(Request $request)
     {
         return view('static.company.philosophy', array_merge([
-            'steps' => ['Company - Philosophy']
+            'steps' => [__('vocabulary.company') . ' - ' . __('vocabulary.philosophy')]
         ], $this->getOptions($request)));
     }
 
@@ -63,7 +63,7 @@ class CompanyPageController extends Controller
     public function showHistoryPage(Request $request)
     {
         return view('static.company.history', array_merge([
-            'steps' => ['Company - History']
+            'steps' => [__('vocabulary.company') . ' - ' . __('vocabulary.history')]
         ], $this->getOptions($request)));
     }
 
@@ -76,7 +76,7 @@ class CompanyPageController extends Controller
         $params = $request->route()->parameters();
 
         return view('static.company.distribution', array_merge([
-            'steps' => ['Company - Distribution'],
+            'steps' => [__('vocabulary.company') . ' - ' . __('vocabulary.distribution')],
             'dealers' => $this->dealerService->getByCountryName(array_get($params, 'country'))
         ], $this->getOptions($request)));
     }
@@ -90,7 +90,7 @@ class CompanyPageController extends Controller
         $params = $request->route()->parameters();
 
         return view('static.company.distribution-europe', array_merge([
-            'steps' => ['Company - Distribution', 'Europe'],
+            'steps' => [__('vocabulary.company') . ' - ' . __('vocabulary.distribution') . ', ' . __('vocabulary.europe')],
             'dealers' => $this->dealerService->getByCountryName(array_get($params, 'country'))
         ], $this->getOptions($request)));
     }

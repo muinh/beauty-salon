@@ -61,9 +61,11 @@ class IndexController extends Controller
      */
     public function showHomePage(Request $request)
     {
+        $locale = array_get($this->getOptions($request), 'locale');
+
         return view('static.home', array_merge([
-            'products' => $this->productService->getLastProducts(),
-            'latestNews' => $this->newsService->getLatest(),
+            'products' => $this->productService->getLastProducts($locale),
+            'latestNews' => $this->newsService->getLatest($locale),
             'sliders' => Slider::query()->where('is_on_main', '=', 1)->get(),
             'maxCategories' => AppBag::CATEGORY_SIDEBAR_MAX_COUNT
         ], $this->getOptions($request)));
@@ -76,7 +78,7 @@ class IndexController extends Controller
     public function showPrivacyPolicy(Request $request)
     {
         return view('static.privacy-policy', array_merge([
-            'steps' => ['Privacy Policy']
+            'steps' => [__('vocabulary.privacyPolicy')]
         ], $this->getOptions($request)));
     }
 
@@ -87,7 +89,7 @@ class IndexController extends Controller
     public function showCookiePolicy(Request $request)
     {
         return view('static.cookie-policy', array_merge([
-            'steps' => ['Cookie Policy']
+            'steps' => [__('vocabulary.cookiePolicy')]
         ], $this->getOptions($request)));
     }
 
@@ -98,7 +100,7 @@ class IndexController extends Controller
     public function showNotFoundPage(Request $request)
     {
         return view('static.404', array_merge([
-            'steps' => ['404 - Not Found'],
+            'steps' => ['404 - ' . __('vocabulary.notFound')],
             'products' => $this->productService->getRandomProducts()
         ], $this->getOptions($request)));
     }

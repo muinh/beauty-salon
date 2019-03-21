@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  $category->title . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -15,7 +18,7 @@
                         </li>
                         @foreach($brands as $brand)
                             <li>
-                                <a href="{{ route('show-products-by-brand', ['locale' => $locale, 'brandId' => $brand->id, 'categoryId' => $category->id]) }}" class="mgbross">
+                                <a href="{{ route('show-products-by-brand', ['locale' => $locale, 'brandId' => $brand->id, 'categorySlug' => $category->slug]) }}" class="mgbross">
                                     <span class="prod-color" style="background-color: {{ $brand->color }}">&nbsp</span>{{ $brand->title }}
                                 </a>
                             </li>
@@ -25,10 +28,10 @@
                 <div class="row">
                     @foreach($products as $product)
                         <div class="col-md-4 col-sm-6 prodotti-item">
-                            <a href="{{ route('show-product', ['locale' => 'en', 'categoryId' => $category->id, 'productId' => $product->id]) }}">
-                                <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}">
+                            <a href="{{ route('show-product', ['locale' => $locale, 'slug' => $product->categorySlug, 'productId' => $product->id]) }}">
+                                <img class="img-responsive" src="{{ asset($assetsSrc . $product->mainImage) }}">
                                 <div class="text-center prod-label">
-                                    <span class="prod-color" style="background-color: {{ $product->brandId->color }}">&nbsp;</span>{{ $product->name }}
+                                    <span class="prod-color" style="background-color: {{ $product->brandColor }}">&nbsp;</span>{{ $product->name }}
                                 </div>
                             </a>
                         </div>

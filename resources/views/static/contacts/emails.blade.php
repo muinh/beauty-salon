@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  __('vocabulary.emails') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -15,7 +18,7 @@
                     {!! __('vocabulary.emailsContacts') !!}
                 </ul>
                 <div class="map-responsive">
-                    <iframe src="{!! __('vocabulary.emailsMapLink') !!}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+{{--                    <iframe src="{!! __('vocabulary.emailsMapLink') !!}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>--}}
                 </div>
             </div>
             @include('layouts.components.sidebar', ['menuType' => 'contacts', 'brands' => $brands])

@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+    {{ $title =  $article->name . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     @include('layouts.components.breadcrumbs')
@@ -8,12 +11,13 @@
                 <h1 class="pull-left">{{ $article->name }}</h1>
                 <div class="clear-both"></div>
                 <ul class="list-unstyled list-inline blog-info">
+{{--                    {{ dd($article) }}--}}
                     <li>
-                        <i class="fa fa-calendar"></i>{{ $article->created_at->format('j M\\. Y') }}
+                        <i class="fa fa-calendar pr-5"></i>{{ $article->created_at }}
                     </li>
                     <li><i class="fa fa-tags"></i>
-                        <a href="{{ route('show-news-by-category', ['locale' => $locale, 'newsCategoryId' => $article->news_category_id]) }}">
-                            {{ $article->newsCategoryId->name }}
+                        <a href="{{ route('show-news-by-category', ['locale' => $locale, 'newsCategoryId' => $article->newsCategoryId]) }}">
+                            {{ $article->newsCategoryTranslatedName ?? $article->newsCategoryName }}
                         </a>
                     </li>
                 </ul>
@@ -21,7 +25,7 @@
                     <div class="blog-img">
                         <img class="img-responsive" src="{{ asset($assetsSrc . $article->mainImage) }}" alt="{{ $article->name }}">
                     </div>
-                    {{ $article->content }}
+                    {{ $article->newsContent ?? $article->content }}
                 </div>
                 <div class="clear-both"></div>
                 <hr>

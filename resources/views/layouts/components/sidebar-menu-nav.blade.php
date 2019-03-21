@@ -8,9 +8,9 @@
             <div class="tab-pane fade in active" id="cat">
                 <ul class="list-group sidebar-nav-v1 margin-bottom-30" id="sidebar-nav">
                     @isset($categoryMenus)
-                        @foreach($categoryMenus as $id => $menu)
+                        @foreach($categoryMenus as $slug => $menu)
                             <li class="list-group-item">
-                                <a href="{{ route('show-products-by-category', ['locale' => $locale, 'categoryId' => $id]) }}" class="selected">
+                                <a href="{{ route('show-products-by-category', ['locale' => $locale, 'slug' => $slug]) }}" class="selected">
                                     {{ $menu }}
                                 </a>
                             </li>
@@ -21,9 +21,9 @@
             <div class="tab-pane fade in " id="lin">
                 <ul class="list-group sidebar-nav-v1 margin-bottom-30" id="sidebar-nav">
                     @isset($lineMenus)
-                        @foreach($lineMenus as $id => $menu)
+                        @foreach($lineMenus as $slug => $menu)
                             <li class="list-group-item">
-                                <a href="{{ route('show-products-by-line', ['locale' => $locale, 'lineId' => $id]) }}" class="selected">{{ $menu }}</a>
+                                <a href="{{ route('show-products-by-line', ['locale' => $locale, 'slug' => $slug]) }}" class="selected">{{ $menu }}</a>
                             </li>
                         @endforeach
                     @endif
@@ -33,10 +33,10 @@
     </div>
 @elseif ($menuType === 'company')
     <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
-        <li class="list-group-item"><a href="{{ route('company-profile', 'en') }}" class="selected">{{ __('vocabulary.profile') }}</a></li>
-        <li class="list-group-item"><a href="{{ route('company-philosophy', 'en') }}">{{ __('vocabulary.philosophy') }}</a></li>
-        <li class="list-group-item"><a href="{{ route('company-history', 'en') }}">{{ __('vocabulary.history') }}</a></li>
-        <li class="list-group-item"><a href="{{ route('company-distribution', 'en') }}">{{ __('vocabulary.distribution') }}</a></li>
+        <li class="list-group-item"><a href="{{ route('company-profile', ['locale' => $locale]) }}" class="selected">{{ __('vocabulary.profile') }}</a></li>
+        <li class="list-group-item"><a href="{{ route('company-philosophy', ['locale' => $locale]) }}">{{ __('vocabulary.philosophy') }}</a></li>
+        <li class="list-group-item"><a href="{{ route('company-history', ['locale' => $locale]) }}">{{ __('vocabulary.history') }}</a></li>
+        <li class="list-group-item"><a href="{{ route('company-distribution', ['locale' => $locale]) }}">{{ __('vocabulary.distribution') }}</a></li>
     </ul>
 @elseif ($menuType === 'designer')
     <ul class="list-group sidebar-nav-v1" id="sidebar-nav">

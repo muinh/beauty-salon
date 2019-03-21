@@ -1,5 +1,7 @@
 @extends('layouts.main')
-@section('title', 'Hair salon furniture & beauty salon equipment - Gamma & Bross')
+@section('title')
+    {{ $title =  __('vocabulary.home') . ' - ' . __('vocabulary.metaDescription') }}
+@endsection
 @section('content')
     @include('layouts.components.header')
     <!-- Slider -->
@@ -35,7 +37,7 @@
                         @foreach($categories as $index => $category)
                             @if($index <= $maxCategories)
                                 <li role="presentation" class="list-group-item">
-                                    <a href="{{ route('show-products-by-category', ['locale' => $locale, 'categoryId' => $category->id]) }}">{{ $category->title }}</a>
+                                    <a href="{{ route('show-products-by-category', ['locale' => $locale, 'slug' => $category->slug]) }}">{{ $category->title }}</a>
                                 </li>
                             @endif
                         @endforeach
@@ -53,12 +55,13 @@
                     <h2>{!! __('vocabulary.productHighlights') !!}</h2>
                 </div>
                 <div class="row">
-                    @foreach($products as $product)
+                    @foreach($products as $key => $product)
+                        {{--{{ dd($product) }}--}}
                         <div class="col-md-3 col-sm-6">
                             <div class="team-v2">
                                 <a href="{{ route('show-product', [
                                             'locale' => $locale,
-                                            'categoryId' => $product->category_id,
+                                            'categorySlug' => $product->categorySlug,
                                             'productId' => $product->id
                                         ]) }}">
                                     <img class="img-responsive" src="{{ asset($assetsSrc . $product->main_image) }}" alt="{{ $product->name }}" />
@@ -67,16 +70,16 @@
                                     <h3>
                                         <a href="{{ route('show-product', [
                                             'locale' => $locale,
-                                            'categoryId' => $product->category_id,
+                                            'categorySlug' => $product->categorySlug,
                                             'productId' => $product->id
-                                        ]) }}">{{ $product->name }}
+                                        ]) }}">{{ $product->translationName ?? $product->name }}
                                         </a>
                                     </h3>
                                     <p>
-                                        <strong>{{ $product->categoryId->title }}</strong>
+                                        {{ $product->categoryTranslationName ?? $product->categoryTitle }}
                                     </p>
                                     <p>
-                                        <strong>{{ $product->brandId->name }}</strong>
+                                        <strong>{{ $product->brandName }}</strong>
                                     </p>
                                 </div>
                             </div>
@@ -106,13 +109,13 @@
                             @endif
                             <div class="caption">
                                 <h3>
-                                    <a href="{{ route('show-news', ['locale' => $locale, 'newsId' => $article->id]) }}">
+                                    <a href="{{ route('show-news', ['locale' => $locale, 'slug' => $article->id]) }}">
                                         {{ $article->name }}
                                     </a>
                                 </h3>
-                                <small>{{ $article->created_at->format('j M\\. Y') }}</small>
+                                <small>{{ $article->createdAt }}</small>
                                 <p>{{ str_limit($article->content, 200, '...') }}</p>
-                                <a href="{{ route('show-news', ['locale' => $locale, 'newsId' => $article->id]) }}" class="btn-u">{!! __('vocabulary.more') !!}</a>
+                                <a href="{{ route('show-news', ['locale' => $locale, 'slug' => $article->id]) }}" class="btn-u">{!! __('vocabulary.more') !!}</a>
                             </div>
                         </div>
                     </div>

@@ -18,9 +18,9 @@ class CategoryController extends Controller
         $lines = array_get($this->getOptions($request), 'lines');
 
         return view('category.index', array_merge([
-            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'id') : null,
-            'lineMenus' => $lines !== null ? $lines->pluck('name', 'id') : null,
-            'steps' => ['Products']
+            'categoryMenus' => $categories !== null ? $categories->pluck('title', 'slug') : null,
+            'lineMenus' => $lines !== null ? $lines->pluck('title', 'slug') : null,
+            'steps' => [__('vocabulary.products')]
         ], $this->getOptions($request)));
     }
 }

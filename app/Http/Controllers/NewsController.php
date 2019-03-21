@@ -50,7 +50,7 @@ class NewsController extends Controller
     {
         return view('news.index', array_merge([
             'news' => $this->newsService->getAll(),
-            'steps' => ['News']
+            'steps' => [__('vocabulary.news')]
         ], $this->getOptions($request)));
     }
 
@@ -65,7 +65,7 @@ class NewsController extends Controller
 
         return view('news.index', array_merge([
             'news' => $this->newsService->getByCategory($newsCategoryId),
-            'steps' => ['News']
+            'steps' => [__('vocabulary.news')]
         ], $this->getOptions($request)));
     }
 

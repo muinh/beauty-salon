@@ -46,8 +46,8 @@ class DesignCenterController extends Controller
     public function showLayouts(Request $request)
     {
         return view('design-center.layouts', array_merge([
-            'layouts' => $this->designCenterService->getAllSalonLayouts(),
-            'steps' => ['Design Center - Salon Layouts']
+            'layouts' => $this->designCenterService->getAllSalonLayouts(array_get($this->getOptions($request), 'locale')),
+            'steps' => [__('vocabulary.designCenters') . ' - ' . __('vocabulary.salonLayouts')]
         ], $this->getOptions($request)));
     }
 
@@ -58,8 +58,8 @@ class DesignCenterController extends Controller
     public function showPictures(Request $request)
     {
         return view('design-center.pictures', array_merge([
-            'pictures' => $this->designCenterService->getAllSalonPictures(),
-            'steps' => ['Design Center - Salon Pictures']
+            'pictures' => $this->designCenterService->getAllSalonPictures(array_get($this->getOptions($request), 'locale')),
+            'steps' => [__('vocabulary.designCenters') . ' - ' . __('vocabulary.salonPictures')]
         ], $this->getOptions($request)));
     }
 
@@ -70,8 +70,8 @@ class DesignCenterController extends Controller
     public function showShowrooms(Request $request)
     {
         return view('design-center.showrooms', array_merge([
-            'showrooms' => $this->designCenterService->getAllShowrooms(),
-            'steps' => ['Design Center - Showrooms']
+            'showrooms' => $this->designCenterService->getAllShowrooms(array_get($this->getOptions($request), 'locale')),
+            'steps' => [__('vocabulary.designCenters') . ' - ' . __('vocabulary.showrooms')]
         ], $this->getOptions($request)));
     }
 
@@ -82,7 +82,7 @@ class DesignCenterController extends Controller
     public function showPlanner(Request $request)
     {
         return view('design-center.planner', array_merge([
-            'steps' => ['Design Center - Salon Planner']
+            'steps' => [__('vocabulary.designCenters') . ' - ' . __('vocabulary.salonPlanner')]
         ], $this->getOptions($request)));
     }
 }

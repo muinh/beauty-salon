@@ -55,7 +55,7 @@ class Controller extends BaseController
         LineService $lineService,
         DesignerService $designerService,
         BrandsService $brandsService,
-        string $locale = 'en'
+        string $locale = 'ru'
     ) {
         $this->categoryService = $categoryService;
         $this->lineService = $lineService;
@@ -84,18 +84,20 @@ class Controller extends BaseController
     protected function getOptions(Request $request)
     {
         $params = $request->route()->parameters();
+        $locale = array_get($params, 'locale') ?? $this->locale;
+
         return [
             'controllerName' => $this->getControllerName($request),
-            'categories' => $this->categoryService->getAllCategories(),
-            'lines' => $this->lineService->getAllLines(),
-            'designers' => $this->designerService->getAllDesigners(),
+            'categories' => $this->categoryService->getAllCategories($locale),
+            'lines' => $this->lineService->getAllLines($locale),
+            'designers' => $this->designerService->getAllDesigners($locale),
             'brands' => $this->brandsService->getAllBrands(),
             'sliderRand' => Slider::query()
                 ->where('is_on_main', '=', 0)
                 ->inRandomOrder()
                 ->first(),
             'sidebarTemplate' => '/' . $this->locale . AppBag::CATEGORY_SIDEBAR_TEMPLATE,
-            'locale' => array_get($params, 'locale') ?? $this->locale,
+            'locale' => $locale,
             'assetsSrc' => AppBag::ASSETS_SRC
         ];
     }

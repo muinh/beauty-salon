@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <p><b>{{ config('app.name') }}</b> - 2018 &copy; {{ __('vocabulary.rightsReserved') }} - {{ __('vocabulary.footerText') }}<br/>
-                        <span class="hidden-xs">{{ __('vocabulary.footerText2') }}
-                            <a href="{{ route('show-privacy-policy') }}" class="iubenda-nostyle no-brand iubenda-embed" title="{{ __('vocabulary.privacyPolicy') }}">{{ __('vocabulary.privacyPolicy') }}</a>
-                        </span>
+                    <p><b>{{ config('app.name') }}</b> - 2018 &copy; {{ __('vocabulary.rightsReserved') }}<br/>
+                        {{--<span class="hidden-xs">{{ __('vocabulary.footerText2') }}--}}
+                            {{--<a href="{{ route('show-privacy-policy') }}" class="iubenda-nostyle no-brand iubenda-embed" title="{{ __('vocabulary.privacyPolicy') }}">{{ __('vocabulary.privacyPolicy') }}</a>--}}
+                        {{--</span>--}}
                     </p>
                 </div>
                 <!-- Social Links -->

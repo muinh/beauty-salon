@@ -8152,6 +8152,10 @@ img.image-md {
 .margin-bottom-100 { 
    clear:both;
 }
+.pr-5 {
+  padding-right: 5px;
+}
+
 .margin-bottom-5  { margin-bottom:5px;}
 .margin-bottom-10 { margin-bottom:10px;} 
 .margin-bottom-15 { margin-bottom:15px;}
@@ -10643,7 +10647,6 @@ header-v6.css
 	.header-v6 .dropdown-menu {
 		border: none;
 		padding: 0;
-		min-width: 230px;
 		border-radius: 0;
 		background: #fff;
 		z-index: 9999 !important;
@@ -11847,7 +11850,6 @@ p {
     height: 15px;
     display: inline-block;
     margin: 0 10px 0 0;
-    position: absolute;
     left: 0;
     background: #eee;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -12438,3 +12440,26 @@ div.distributorebox h4{ font-size:14px; font-weight:bold; margin-bottom:6px; }
 div.distributorebox span{  width:20px; color:#aaa; float:left }
 div.distributorebox a{ color:#000; text-decoration:none}
 div.distributorebox a:hover{color:#000; text-decoration:underline }
+
+img.shrink-logo {
+  width: 55px!important;
+  height: 55px!important;
+  margin-right: 10px;
+}
+img.shrink-logo-right {
+  width: 184px!important;
+}
+div.navbar-brand {
+  margin-bottom: 10px!important;
+}
+p.distributor-text {
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.breadcrumb {
+  padding-top: 20px!important;
+}
+.flag-picture {
+  border-radius: 5px;
+}

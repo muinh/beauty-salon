@@ -1,0 +1,7 @@
+div.readmore {
+    height: 100%!important;
+    min-width: 200px;
+}
+div.readmore+a.readm-link {
+    display: none;
+}
